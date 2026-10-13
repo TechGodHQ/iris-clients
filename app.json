@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Iris Clients",
+    "slug": "iris-clients",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "iris-clients",
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

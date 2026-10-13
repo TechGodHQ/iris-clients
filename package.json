@@ -1,0 +1,60 @@
+{
+  "name": "iris-clients",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start --web",
+    "web": "expo start --web",
+    "build:web": "expo export --platform web",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:browser": "playwright test",
+    "ci": "expo install --check && npm run typecheck && npm test -- --ci --runInBand && npm run build:web && npm run test:browser"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~57.0.16",
+    "@techgod/iris-client": "0.4.0",
+    "expo": "~57.0.27",
+    "expo-constants": "~57.0.21",
+    "expo-linking": "~57.0.12",
+    "expo-router": "~57.0.25",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-web": "~0.21.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@playwright/test": "^1.52.0",
+    "@react-native/jest-preset": "^0.86.3",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.0.0",
+    "@types/jest": "29.5.14",
+    "@types/node": "^26.6.5",
+    "@types/react": "~19.2.4",
+    "@types/react-dom": "~19.2.3",
+    "jest": "^29.7.0",
+    "jest-expo": "~57.0.5",
+    "serve": "^14.2.6",
+    "typescript": "~6.0.3"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "testMatch": [
+      "**/*.unit.test.{ts,tsx}"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.ts"
+    ]
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

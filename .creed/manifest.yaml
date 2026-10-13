@@ -1,0 +1,13 @@
+version: 1
+source:
+  type: local
+  path: .creed
+targets:
+  - name: agents
+    enabled: true
+    output_dir: .
+config:
+  - name: project
+    path: config/project.md
+  - name: development
+    path: config/development.md
